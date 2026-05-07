@@ -1,0 +1,62 @@
+[workspace]
+members = [
+    "crates/daw-engine",
+    "crates/daw-core",
+    "crates/daw-ui",
+    "crates/daw-vst",
+    "crates/daw-state",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+authors = ["Your Name <your.email@example.com>"]
+
+[workspace.dependencies]
+# Audio I/O and processing
+cpal = "0.17.3"
+wmidi = "4.0.11"
+rodio = "0.22.2"
+symphonium = "0.9.2"
+creek = "1.2.3"
+audio-filters = "0.4"
+
+# Plugin hosting
+rack = "0.4.8"
+
+# Concurrency primitives
+parking_lot = "0.12.5"
+crossbeam = "0.8.4"
+ringbuf = "0.5.0"
+
+# Serialization
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
+
+# Error handling
+anyhow = "1.0.102"
+thiserror = "2.0.18"
+
+# GUI frameworks
+egui = "0.34.2"
+eframe = "0.34.2"
+
+# File handling
+rfd = "0.17.2"
+
+# Logging
+log = "0.4.29"
+env_logger = "0.11.10"
+
+# CLI
+clap = { version = "4.6.1", features = ["derive"] }
+
+[profile.release]
+opt-level = 3
+lto = true           # Link-time optimization for audio performance
+codegen-units = 1    # Better optimization, slower compile
+strip = true         # Remove debug symbols
+
+[profile.dev]
+opt-level = 1        # Some optimization for audio thread in dev builds

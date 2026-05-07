@@ -1,0 +1,13 @@
+[package]
+name = "daw-ui"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[dependencies]
+daw-core = { path = "../daw-core" }
+daw-engine = { path = "../daw-engine" }
+
+egui.workspace = true
+eframe.workspace = true
+log.workspace = true

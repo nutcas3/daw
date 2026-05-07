@@ -1,0 +1,18 @@
+[package]
+name = "daw-engine"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[dependencies]
+daw-core = { path = "../daw-core" }
+
+cpal.workspace = true
+parking_lot.workspace = true
+crossbeam.workspace = true
+ringbuf.workspace = true
+thiserror.workspace = true
+log.workspace = true
+
+# Optional audio processing
+audio-filters = { workspace = true, optional = true }

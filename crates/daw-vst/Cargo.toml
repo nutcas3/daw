@@ -1,0 +1,12 @@
+[package]
+name = "daw-vst"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[dependencies]
+daw-core = { path = "../daw-core" }
+
+# rack.workspace = true  # Uncomment when ready to implement plugin hosting
+thiserror.workspace = true
+log.workspace = true

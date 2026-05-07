@@ -1,0 +1,12 @@
+[package]
+name = "daw-state"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[dependencies]
+daw-core = { path = "../daw-core" }
+
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
