@@ -1,0 +1,40 @@
+# Rust
+/target/
+**/*.rs.bk
+*.pdb
+
+# Cargo
+Cargo.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Audio files (optional - uncomment if you don't want to commit test audio)
+# *.wav
+# *.mp3
+# *.flac
+
+# Project files (generated)
+*.dawproject
+
+# Build artifacts
+*.o
+*.so
+*.dylib
+*.dll
+
+# Logs
+*.log
+
+# Profiling
+flamegraph.svg
+perf.data
+perf.data.old
